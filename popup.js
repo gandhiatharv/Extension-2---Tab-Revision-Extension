@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to display search queries in the popup
   function displaySearchQueries(searches, showStarredOnly = false) {
-    // Define the search lists
     const searchLists = {
       "Urgent Reminders": document.getElementById('search-list-urgent-reminders'),
       "Skills to Develop": document.getElementById('search-list-skills-to-develop'),
@@ -84,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Function to format timestamp
+  // Function to format timestamp
   function formatTimestamp(timestamp) {
     const date = new Date(timestamp);
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month (0-indexed)
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const minutes = date.getMinutes().toString().padStart(2, '0'); // Minutes
     return `${month}/${day}, ${hours}:${minutes}`;
   }
+
 
   // Function to handle viewing starred messages
   document.getElementById('view-starred-btn').addEventListener('click', function() {
@@ -114,17 +115,203 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to delete selected search queries
   document.getElementById('delete-btn').addEventListener('click', function() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const checkedIndices = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => parseInt(checkbox.dataset.index));
-
     getSavedSearches(function(searches) {
-      const remainingSearches = searches.filter((_, index) => !checkedIndices.includes(index));
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
       chrome.storage.local.set({ searches: remainingSearches }, function() {
         displaySearchQueries(remainingSearches); // Refresh the display
       });
     });
   });
+  document.getElementById('delete-btn1').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn2').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn3').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn4').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn5').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn6').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn7').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn8').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn9').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn10').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn11').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn12').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn13').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn14').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn15').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn16').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+
+  document.getElementById('delete-btn17').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+  
+  document.getElementById('delete-btn18').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+  
+  document.getElementById('delete-btn19').addEventListener('click', function() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    getSavedSearches(function(searches) {
+      const remainingSearches = searches.filter((_, index) => !checkboxes[index].checked);
+      chrome.storage.local.set({ searches: remainingSearches }, function() {
+        displaySearchQueries(remainingSearches); // Refresh the display
+      });
+    });
+  });
+  
 
   // Retrieve saved search queries and display them initially
   getSavedSearches(displaySearchQueries);
